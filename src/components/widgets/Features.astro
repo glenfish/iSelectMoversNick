@@ -7,13 +7,13 @@ const items = [
 			title: 'Get the best price.',
 			description:
 				'With iSelect Movers, you get a choice of removalists all out bidding each other.',
-			icon: 'tabler:brand-tailwind',
+			icon: 'tabler:list-check',
 		},
 		{
 			title: 'All removalists are vetted',
 			description:
-				'You get the iSelect Movers assurance. All removalists are vetta, so you get a quality move.',
-			icon: 'tabler:components',
+				'You get the iSelect Movers assurance. All removalists are vetted, so you get a quality move.',
+			icon: 'tabler:list-check',
 		},
 		{
 			title: 'Best Practices',
@@ -27,19 +27,19 @@ const items = [
 			title: 'Excellent Page Speed',
 			description:
 				'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-			icon: 'tabler:rocket',
+			icon: 'tabler:list-check',
 		},
 		{
 			title: 'Search Engine Optimization (SEO)',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-			icon: 'tabler:arrows-right-left',
+			icon: 'tabler:list-check',
 		},
 		{
 			title: 'Open to new ideas and contributions',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-			icon: 'tabler:bulb',
+			icon: 'tabler:list-check',
 		},
 	],
 ];
@@ -48,7 +48,7 @@ const items = [
 <section class="scroll-mt-16" id="features">
 	<div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
 		<div class="mb-10 md:mx-auto sm:text-center md:mb-12 max-w-3xl">
-			<p class="text-base text-primary-600 dark:text-primary-200 font-semibold tracking-wide uppercase">Features</p>
+			<p class="text-base text-orange-600 dark:text-primary-200 font-semibold tracking-wide uppercase">Features</p>
 			<h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
 				What you get with <span class="whitespace-nowrap">iSelect Movers</span>
 			</h2>
@@ -63,7 +63,7 @@ const items = [
 						{subitems.map(({ title, description, icon }) => (
 							<div class="flex flex-row max-w-md">
 								<div class="mb-4 mr-4">
-									<div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary-500 dark:bg-primary-700">
+									<div class="flex items-center justify-center w-12 h-12 rounded-full bg-orange-500 dark:bg-orange-500">
 										{icon && <Icon name={icon} class="w-6 h-6 text-white icon-light" />}
 									</div>
 								</div>
