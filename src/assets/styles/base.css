@@ -2549,12 +2549,12 @@ input[type="text"], input[type="email"] {
 height: 45px!important;
 
 padding: 5px!important;
-width: 260px!important;
+width: 100%!important;
 }
 
 input[type="tel"] {
 height: 45px!important;
-width: 260px!important;
+/* width: 260px!important; */
 padding: 5px!important;
 /* width: 70px; */
 }
