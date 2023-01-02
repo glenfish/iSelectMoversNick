@@ -1,5 +1,17 @@
+---
+import { SITE } from '~/config.mjs';
+import { getCanonical, getHomePermalink } from '~/utils/permalinks';
+import Layout from '~/layouts/FormLayout.astro';
 
-   
+
+const meta = {
+	title: SITE.title,
+	description: SITE.description,
+	canonical: getCanonical(getHomePermalink()),
+};
+
+---
+<Layout {meta}>
 <form class="jotform-form" action="https://api.form-data.com/f/yi9fvsylfrhxywjh69kkv" method="post" name="form_223611107637450" id="223611107637450" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="223611107637450" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
     <div role="main" class="form-all">
       <ul class="form-section page-section">
@@ -153,14 +165,18 @@
       </ul>
       
     </div>
-    <input type="hidden" class="simple_spc" id="leadSource" name="leadSource" value="" />
-    <script is:inline type="text/javascript">
+    <script>
+      JotForm.showJotFormPowered = "new_footer";
+    </script>
+    <script>
+      JotForm.poweredByText = "";
+    </script><input type="hidden" class="simple_spc" id="leadSource" name="leadSource" value="" />
+    <script type="text/javascript">
       var all_spc = document.querySelectorAll("form[id='223611107637450'] .si" + "mple" + "_spc");
       for (var i = 0; i < all_spc.length; i++)
       {
         all_spc[i].value = "223611107637450-223611107637450";
       }
-      window.onbeforeunload = function(){ 	window.scrollTo(0,0); }
     </script>
     
   </form>
@@ -168,3 +184,6 @@
 
 
 
+    <script type="text/javascript">JotForm.ownerView=true;</script>  
+    
+</Layout>
