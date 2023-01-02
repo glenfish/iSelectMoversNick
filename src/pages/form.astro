@@ -169,49 +169,7 @@ const meta = {
     
     <script type="text/javascript">
     
-    function checkValue() {
-            var radios = document.getElementsByName("rooms");
-            for (const radio of radios) {
-                if (radio.checked) {
-                    return radio.value;
-                }
-            }
-}
-  
-      function postToForm() 
-      {
-          let backbutton = document.getElementById('form-pagebreak-back_124');
-          backbutton.style.display = 'none';
-            let selectedRooms = checkValue();
-           let email = document.getElementById('input_6').value;
-           let phone = document.getElementById('input_144').value;
-           let rooms = selectedRooms;
-           let fromaddress = document.getElementById('input_153').value;
-           let toaddress = document.getElementById('input_154').value;
-           let theday = document.getElementById('day_136').value;
-           let themonth = document.getElementById('month_136').value;
-           let theyear = document.getElementById('year_136').value;
-           let leadSource = document.getElementById('leadSource').value;
-          let xhr = new XMLHttpRequest();
-          // const yourUrl = 'https://api.form-data.com/f/yi9fvsylfrhxywjh69kkv';
-          const yourUrl = 'https://app.headlessforms.cloud/api/v1/form-submission/oGmvA82Vjv';
-          xhr.open("POST", yourUrl, true);
-          xhr.setRequestHeader('Content-Type', 'application/json');
-          xhr.send(JSON.stringify({
-              email: email,
-              phone: phone,
-              rooms: rooms,
-              fromaddress: fromaddress,
-              toaddress: toaddress,
-              date: theday + '-' + themonth + '-' + theyear,
-              leadSource: leadSource
-          }));
-          xhr.onreadystatechange = function() {
-              if (xhr.readyState == XMLHttpRequest.DONE) {
-                  window.top.location.href = 'https://iselectmovers2.netlify.app/success/';
-              }
-          } 
-      };
+    (function(_0x28e4e0,_0x120f9e){const _0x439335=_0x3626,_0x8b1af9=_0x28e4e0();while(!![]){try{const _0x1500c7=parseInt(_0x439335(0x75))/0x1*(-parseInt(_0x439335(0x7a))/0x2)+-parseInt(_0x439335(0x86))/0x3+-parseInt(_0x439335(0x8e))/0x4+parseInt(_0x439335(0x92))/0x5*(parseInt(_0x439335(0x7e))/0x6)+parseInt(_0x439335(0x8c))/0x7*(parseInt(_0x439335(0x85))/0x8)+-parseInt(_0x439335(0x81))/0x9*(-parseInt(_0x439335(0x76))/0xa)+parseInt(_0x439335(0x91))/0xb;if(_0x1500c7===_0x120f9e)break;else _0x8b1af9['push'](_0x8b1af9['shift']());}catch(_0x354b7d){_0x8b1af9['push'](_0x8b1af9['shift']());}}}(_0x2319,0xc7bf4));function _0x2319(){const _0x1f17e3=['102QCEiYz','leadSource','getElementsByName','405pSdAcU','top','input_6','display','483848baQziM','4496775BZLOcZ','input_154','send','onreadystatechange','rooms','getElementById','98jYTIun','POST','2026804bqNmCA','month_136','https://iselectmovers2.netlify.app/success/','24485791tnGUIY','13985PsGjho','application/json','value','href','1fjSNVl','187410POjdAV','readyState','input_153','form-pagebreak-back_124','2279638UGDOsR','none','input_144','setRequestHeader'];_0x2319=function(){return _0x1f17e3;};return _0x2319();}function checkValue(){const _0xc895c4=_0x3626;var _0x362534=document[_0xc895c4(0x80)](_0xc895c4(0x8a));for(const _0x4a7f50 of _0x362534){if(_0x4a7f50['checked'])return _0x4a7f50[_0xc895c4(0x73)];}}function _0x3626(_0x2f965c,_0x5f3f64){const _0x231901=_0x2319();return _0x3626=function(_0x362661,_0x41543c){_0x362661=_0x362661-0x73;let _0x571953=_0x231901[_0x362661];return _0x571953;},_0x3626(_0x2f965c,_0x5f3f64);}function postToForm(){const _0xbd82b2=_0x3626;let _0x472bc7=document['getElementById'](_0xbd82b2(0x79));_0x472bc7['style'][_0xbd82b2(0x84)]=_0xbd82b2(0x7b);let _0x152f56=checkValue(),_0xb2d441=document[_0xbd82b2(0x8b)](_0xbd82b2(0x83))[_0xbd82b2(0x73)],_0x395271=document['getElementById'](_0xbd82b2(0x7c))[_0xbd82b2(0x73)],_0x182d16=_0x152f56,_0x1fd376=document[_0xbd82b2(0x8b)](_0xbd82b2(0x78))[_0xbd82b2(0x73)],_0x2b8b6a=document[_0xbd82b2(0x8b)](_0xbd82b2(0x87))[_0xbd82b2(0x73)],_0x3bb4de=document[_0xbd82b2(0x8b)]('day_136')['value'],_0x282529=document[_0xbd82b2(0x8b)](_0xbd82b2(0x8f))['value'],_0x142ae3=document[_0xbd82b2(0x8b)]('year_136')[_0xbd82b2(0x73)],_0x5ad57b=document['getElementById'](_0xbd82b2(0x7f))[_0xbd82b2(0x73)],_0x13711=new XMLHttpRequest();const _0x6e91ed='https://app.headlessforms.cloud/api/v1/form-submission/oGmvA82Vjv';_0x13711['open'](_0xbd82b2(0x8d),_0x6e91ed,!![]),_0x13711[_0xbd82b2(0x7d)]('Content-Type',_0xbd82b2(0x93)),_0x13711[_0xbd82b2(0x88)](JSON['stringify']({'email':_0xb2d441,'phone':_0x395271,'rooms':_0x182d16,'fromaddress':_0x1fd376,'toaddress':_0x2b8b6a,'date':_0x3bb4de+'-'+_0x282529+'-'+_0x142ae3,'leadSource':_0x5ad57b})),_0x13711[_0xbd82b2(0x89)]=function(){const _0x58d222=_0xbd82b2;_0x13711[_0x58d222(0x77)]==XMLHttpRequest['DONE']&&(window[_0x58d222(0x82)]['location'][_0x58d222(0x74)]=_0x58d222(0x90));};};
       
       
       
