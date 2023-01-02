@@ -12,7 +12,7 @@ const meta = {
 
 ---
 <Layout {meta}>
-<form class="jotform-form" onsubmit="postToForm(email,phone,rooms,fromaddress,toaddress,theday,themonth,theyear,leadSource);" method="post" name="form_223611107637450" id="223611107637450" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="223611107637450" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+<form class="jotform-form" onsubmit="postToForm();" method="GET" name="form_223611107637450" id="223611107637450" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="223611107637450" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
     <div role="main" class="form-all">
       <ul class="form-section page-section">
         <li class="form-line" data-type="control_text" id="id_148">
@@ -183,8 +183,19 @@ const meta = {
     
     JotForm.ownerView=true;
 
-    function postToForm(email,phone,rooms,fromaddress,toaddress,theday,themonth,theyear,leadSource) 
+    function postToForm() 
     {
+
+
+         let email = document.getElementById('email');
+         let phone = document.getElementById('phone');
+         let rooms = document.getElementById('rooms');
+         let fromaddress = document.getElementById('fromaddress');
+         let toaddress = document.getElementById('toaddress');
+         let theday = document.getElementById('theday');
+         let themonth = document.getElementById('themonth');
+         let theyear = document.getElementById('theyear');
+
         let xhr = new XMLHttpRequest();
         const yourUrl = 'https://api.form-data.com/f/yi9fvsylfrhxywjh69kkv';
         xhr.open("POST", yourUrl, true);
