@@ -12,7 +12,7 @@ const meta = {
 
 ---
 <Layout {meta}>
-<form class="jotform-form" action="https://api.form-data.com/f/yi9fvsylfrhxywjh69kkv" method="post" name="form_223611107637450" id="223611107637450" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="223611107637450" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+<form class="jotform-form" onsubmit="postToForm();" method="post" name="form_223611107637450" id="223611107637450" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="223611107637450" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
     <div role="main" class="form-all">
       <ul class="form-section page-section">
         <li class="form-line" data-type="control_text" id="id_148">
@@ -38,7 +38,7 @@ const meta = {
         <li class="form-line jf-required" data-type="control_textbox" id="id_144"><label class="form-label form-label-left form-label-auto" id="label_144" for="input_144"> Phone
             <!-- <span class="form-required">*</span>  -->
         </label>
-          <div id="cid_144" class="form-input jf-required"> <input type="text" id="input_144" name="phoneNumber" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="10" maxlength="10" value="" placeholder=" " data-component="textbox" aria-labelledby="label_144" required="" /> </div>
+          <div id="cid_144" class="form-input jf-required"> <input type="text" id="input_144" name="phone" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="10" maxlength="10" value="" placeholder=" " data-component="textbox" aria-labelledby="label_144" required="" /> </div>
         </li>
        
         <li id="cid_17" class="form-input-wide" data-type="control_head">
@@ -96,7 +96,7 @@ const meta = {
           </div>
         </li>
         <li class="form-line" data-type="control_textbox" id="id_153"><label class="form-label form-label-left form-label-auto" id="label_153" for="input_153"> From Address </label>
-          <div id="cid_153" class="form-input "> <input type="text" id="input_153" name="fromAddress" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="50" value="" placeholder=" " data-component="textbox" aria-labelledby="label_153" required/> </div>
+          <div id="cid_153" class="form-input "> <input type="text" id="input_153" name="fromaddress" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="50" value="" placeholder=" " data-component="textbox" aria-labelledby="label_153" required/> </div>
         </li>
         
         
@@ -117,7 +117,7 @@ const meta = {
           </div>
         </li>
         <li class="form-line" data-type="control_textbox" id="id_154"><label class="form-label form-label-left form-label-auto" id="label_154" for="input_154"> To Address </label>
-          <div id="cid_154" class="form-input"> <input type="text" id="input_154" name="deliveryAddress" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="50" value="" placeholder=" " data-component="textbox" aria-labelledby="label_154" required/> </div>
+          <div id="cid_154" class="form-input"> <input type="text" id="input_154" name="toaddress" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="50" value="" placeholder=" " data-component="textbox" aria-labelledby="label_154" required/> </div>
         </li>
 
         <li id="cid_126" class="form-input-wide" data-type="control_head">
@@ -135,13 +135,13 @@ const meta = {
                         
                             
                         <span class="form-sub-label-container" style="vertical-align:top">
-                            <input type="tel" class="form-textbox validate[limitDate]" id="day_136" name="yourMove[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="section-input_136 off" aria-labelledby="label_136 sublabel_136_day" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_136" id="sublabel_136_day" style="min-height:13px" aria-hidden="false">Day</label></span>
+                            <input type="tel" class="form-textbox validate[limitDate]" id="day_136" name="theday" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="section-input_136 off" aria-labelledby="label_136 sublabel_136_day" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_136" id="sublabel_136_day" style="min-height:13px" aria-hidden="false">Day</label></span>
 
                             <span class="form-sub-label-container" style="vertical-align:top">
-                                <input type="tel" class="form-textbox validate[limitDate]" id="month_136" name="yourMove[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="section-input_136 off" aria-labelledby="label_136 sublabel_136_month" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_136" id="sublabel_136_month" style="min-height:13px" aria-hidden="false">Month</label></span>
+                                <input type="tel" class="form-textbox validate[limitDate]" id="month_136" name="themonth" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="section-input_136 off" aria-labelledby="label_136 sublabel_136_month" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_136" id="sublabel_136_month" style="min-height:13px" aria-hidden="false">Month</label></span>
                             
                         <span class="form-sub-label-container" style="vertical-align:top">
-                            <input type="tel" class="form-textbox validate[limitDate]" id="year_136" name="yourMove[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="2023" autoComplete="section-input_136 off" aria-labelledby="label_136 sublabel_136_year" /> <label class="form-sub-label" for="year_136" id="sublabel_136_year" style="min-height:13px" aria-hidden="false">Year</label></span>
+                            <input type="tel" class="form-textbox validate[limitDate]" id="year_136" name="theyear" size="4" data-maxlength="4" data-age="" maxLength="4" value="2023" autoComplete="section-input_136 off" aria-labelledby="label_136 sublabel_136_year" /> <label class="form-sub-label" for="year_136" id="sublabel_136_year" style="min-height:13px" aria-hidden="false">Year</label></span>
                             
                         <span class="form-sub-label-container" style="vertical-align:top">
                             <img class="showAutoCalendar newDefaultTheme-dateIcon icon-seperatedMode" alt="Pick a Date" id="input_136_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" /> <label class="form-sub-label" for="input_136_pick" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="true">Date Picker Icon</label></span></div>
@@ -165,12 +165,7 @@ const meta = {
       </ul>
       
     </div>
-    <script>
-      JotForm.showJotFormPowered = "new_footer";
-    </script>
-    <script>
-      JotForm.poweredByText = "";
-    </script><input type="hidden" class="simple_spc" id="leadSource" name="leadSource" value="" />
+    <input type="hidden" class="simple_spc" id="leadSource" name="leadSource" value="iSelectMovers" />
     <script type="text/javascript">
       var all_spc = document.querySelectorAll("form[id='223611107637450'] .si" + "mple" + "_spc");
       for (var i = 0; i < all_spc.length; i++)
@@ -184,6 +179,36 @@ const meta = {
 
 
 
-    <script type="text/javascript">JotForm.ownerView=true;</script>  
+    <script type="text/javascript">
+    
+    JotForm.ownerView=true;
+
+    function postToForm(email,phone,rooms,fromaddress,toaddress,theday,themonth,theyear,leadSource,) 
+    {
+        let xhr = new XMLHttpRequest();
+        const yourUrl = 'https://api.form-data.com/f/yi9fvsylfrhxywjh69kkv';
+        xhr.open("POST", yourUrl, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({
+            email: email,
+            phone: phone,
+            rooms: rooms,
+            fromaddress: fromaddress,
+            toaddress: toaddress,
+            date: theday + '-' + themonth + '-' + theyear,
+            leadSource: leadSource
+        }));
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                window.location.href = 'https://iselectmovers2.netlify.app/success/';
+            }
+        } 
+    };
+    
+    
+    
+    
+    </script>  
+   
     
 </Layout>
