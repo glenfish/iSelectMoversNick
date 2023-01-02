@@ -173,6 +173,47 @@ const meta = {
         all_spc[i].value = "223611107637450-223611107637450";
       }
     </script>
+    <script type="text/javascript">
+    
+      
+  
+      function postToForm() 
+      {
+  
+  
+           let email = document.getElementById('email').value;
+           let phone = document.getElementById('phone').value;
+           let rooms = document.getElementById('rooms').value;
+           let fromaddress = document.getElementById('fromaddress').value;
+           let toaddress = document.getElementById('toaddress').value;
+           let theday = document.getElementById('theday').value;
+           let themonth = document.getElementById('themonth').value;
+           let theyear = document.getElementById('theyear').value;
+  
+          let xhr = new XMLHttpRequest();
+          const yourUrl = 'https://api.form-data.com/f/yi9fvsylfrhxywjh69kkv';
+          xhr.open("POST", yourUrl, true);
+          xhr.setRequestHeader('Content-Type', 'application/json');
+          xhr.send(JSON.stringify({
+              email: email,
+              phone: phone,
+              rooms: rooms,
+              fromaddress: fromaddress,
+              toaddress: toaddress,
+              date: theday + '-' + themonth + '-' + theyear,
+              leadSource: leadSource
+          }));
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState == XMLHttpRequest.DONE) {
+                  window.location.href = 'https://iselectmovers2.netlify.app/success/';
+              }
+          } 
+      };
+      
+      
+      
+      
+      </script> 
     
   </form>
    
@@ -183,38 +224,7 @@ const meta = {
     
     JotForm.ownerView=true;
 
-    function postToForm() 
-    {
-
-
-         let email = document.getElementById('email');
-         let phone = document.getElementById('phone');
-         let rooms = document.getElementById('rooms');
-         let fromaddress = document.getElementById('fromaddress');
-         let toaddress = document.getElementById('toaddress');
-         let theday = document.getElementById('theday');
-         let themonth = document.getElementById('themonth');
-         let theyear = document.getElementById('theyear');
-
-        let xhr = new XMLHttpRequest();
-        const yourUrl = 'https://api.form-data.com/f/yi9fvsylfrhxywjh69kkv';
-        xhr.open("POST", yourUrl, true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send(JSON.stringify({
-            email: email,
-            phone: phone,
-            rooms: rooms,
-            fromaddress: fromaddress,
-            toaddress: toaddress,
-            date: theday + '-' + themonth + '-' + theyear,
-            leadSource: leadSource
-        }));
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == XMLHttpRequest.DONE) {
-                window.location.href = 'https://iselectmovers2.netlify.app/success/';
-            }
-        } 
-    };
+   
     
     
     
