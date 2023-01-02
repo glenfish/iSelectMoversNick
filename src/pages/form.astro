@@ -175,20 +175,27 @@ const meta = {
     </script>
     <script type="text/javascript">
     
-      
+    function checkValue() {
+            var radios = document.getElementsByName("rooms");
+            for (const radio of radios) {
+                if (radio.checked) {
+                    return radio.value;
+                }
+            }
+}
   
       function postToForm() 
       {
-  
-  
-           let email = document.getElementById('email').value;
-           let phone = document.getElementById('phone').value;
-           let rooms = document.getElementById('rooms').value;
-           let fromaddress = document.getElementById('fromaddress').value;
-           let toaddress = document.getElementById('toaddress').value;
-           let theday = document.getElementById('theday').value;
-           let themonth = document.getElementById('themonth').value;
-           let theyear = document.getElementById('theyear').value;
+          
+            let selectedRooms = checkValue();
+           let email = document.getElementById('input_6').value;
+           let phone = document.getElementById('input_144').value;
+           let rooms = selectedRooms;
+           let fromaddress = document.getElementById('input_153').value;
+           let toaddress = document.getElementById('input_154').value;
+           let theday = document.getElementById('day_136').value;
+           let themonth = document.getElementById('month_136').value;
+           let theyear = document.getElementById('year_136').value;
   
           let xhr = new XMLHttpRequest();
           const yourUrl = 'https://api.form-data.com/f/yi9fvsylfrhxywjh69kkv';
